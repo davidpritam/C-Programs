@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class Ascending
+{
+	public:
+	void ArrayAscending(int n,int a[]);
+};
+
+void Ascending::ArrayAscending(int n,int a[])
+{
+	int i,j,temp;
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+	cout<<"The array is  ";
+	for(i=0;i<n;i++)
+	{
+		cout<<a[i]<<"\t";
+	}
+}
+
+int main()
+{
+	int i,j,n,a[100];
+	cout<<"Enter the value of n\n";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<"Enter the elements\n";
+		cin>>a[i];
+	}
+	Ascending obj;
+	obj.ArrayAscending(n,a);
+	return 0;
+	
+}

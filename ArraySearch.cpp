@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+void InputArray(int a[][])
+{
+	cout<<"Enter the value of nxn array";
+	cin>>n;
+	int i,j;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<"Enter the element of pocket["<<i<<"]["<<j<<"]\n";
+			cin>>a[i][j];
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<a[i][j]<<"\t";
+		}
+	}
+}
+int main()
+{
+	int a[100][100];
+	InputArray(a[][]);
+	return 0;
+}

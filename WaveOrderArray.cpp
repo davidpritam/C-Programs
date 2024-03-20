@@ -26,9 +26,9 @@ int main()
 		cout<<"\n";
 	}
 	cout<<"Array after sine wave\n";
-	for(j=0;j<col;j++)
+	for(j=0;j<row;j++)
 	{
-		if(j&1)
+		if(j%2==0)
 		{
 			for(i=0;i<row;i++)
 			{
